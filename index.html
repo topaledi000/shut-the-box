@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shut The Box</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header>
+        <h1>Shut The Box</h1>
+    </header>
+    <img src="ShutTheBoxIcon.png" alt="">
+    <main>
+        <section id="playerSection">
+            <h2>Enter Player Names</h2>
+            <input id="player1Input" type="text" placeholder="Player 1 Name">
+            <input id="player2Input" type="text" placeholder="Player 2 Name">
+            <button id="startGame">Start Game</button>
+        </section>
+
+        <section id="gameBoard" style="display: none;">
+            <h2 id="roundDisplay">Round 1</h2>
+            <p id="turnDisplay">Player 1's Turn</p>
+            <div class="dice-container">
+                <img id="die1" src="dice1.png" alt="Die 1">
+                <img id="die2" src="dice1.png" alt="Die 2">
+            </div>
+            <div id="boxes">
+                <!-- Dynamically create boxes here -->
+            </div>
+
+            <div class="buttons">
+                <button id="rollDice" class="w3-btn w3-teal w3-round-xlarge" disabled>Roll Dice</button>
+                <button id="individualDice" class="w3-btn w3-aqua w3-round-xlarge" disabled>Individual Dice</button>
+                <button id="sumDice" class="w3-btn w3-lime w3-round-xlarge" disabled>Sum of the Dice</button>
+                <button id="endTurn" class="w3-btn w3-orange w3-round-xlarge" disabled>End Your Turn</button>
+              </div>
+        </section>
+
+        <section id="scorecard" style="display: none;">
+            <h2>Scorecard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Round #</th>
+                        <th id="player1Name">Player 1</th>
+                        <th id="player2Name">Player 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Round scores will populate here -->
+                </tbody>
+                <!--<tfoot> -->
+                <!--     <tr> -->
+                <!--         <td>Total</td> -->
+                <!--         <td id="player1Total">0</td> -->
+                <!--         <td id="player2Total">0</td> -->
+                <!--     </tr> -->
+                <!-- </tfoot> -->
+            </table>
+        </section>
+
+        <section id="winnerSection" style="display: none;">
+            <h2 class="winner-message"></h2>
+            <button id="playAgain" class="w3-btn w3-teal w3-round-xlarge">Play Again</button>
+        </section>
+    </main>
+    <script src="game.js"></script>
+</body>
+</html>
